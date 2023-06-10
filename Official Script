@@ -1,0 +1,154 @@
+local Rayfield = loadstring(game:HttpGet('https://sirius.menu/rayfield'))()
+
+local Window = Rayfield:CreateWindow({
+   Name = "Delta Hacks | DOJ:RP Sandy Shores",
+   LoadingTitle = "Delta Hacks Official Exploit Hub",
+   LoadingSubtitle = "by rizz",
+   ConfigurationSaving = {
+      Enabled = true,
+      FolderName = nil, -- Create a custom folder for your hub/game
+      FileName = "Big Hub"
+   },
+   Discord = {
+      Enabled = true,
+      Invite = "98dWQrkHJT", -- The Discord invite code, do not include discord.gg/. E.g. discord.gg/ABCD would be ABCD
+      RememberJoins = false -- Set this to false to make them join the discord every time they load it up
+   },
+   KeySystem = true, -- Set this to true to use our key system
+   KeySettings = {
+      Title = "DOJ:RP Sandy Shores | Key System",
+      Subtitle = "Join our Discord for the Key, it's free and enjoyable!",
+      Note = "The Key System can't be bypassed, just join our discord so you can get the Key!",
+      FileName = "Key", -- It is recommended to use something unique as other scripts using Rayfield may overwrite your key file
+      SaveKey = false, -- The user's key will be saved, but if you change the key, they will be unable to use your script
+      GrabKeyFromSite = false, -- If this is true, set Key below to the RAW site you would like Rayfield to get the key from
+      Key = {"xNZLCOvpYjnxquxf"} -- List of keys that will be accepted by the system, can be RAW file links (pastebin, github etc) or simple strings ("hello","key22")
+   }
+})
+
+
+local MainTab = Window:CreateTab("📝 Main Script", 4483362458) -- Title, Image
+local mainSection = MainTab:CreateSection("This is the main script, other script you can find on the other site.")
+
+Rayfield:Notify({
+   Title = "Exploit Notification",
+   Content = "You succefully executed Delta Hacks's Script.",
+   Duration = 10,
+   Image = 4483362458,
+   Actions = { -- Notification Buttons
+      Ignore = {
+         Name = "Okay!",
+         Callback = function()
+         print("The user tapped Okay!")
+      end
+   },
+},
+})
+
+
+
+local Button = MainTab:CreateButton({
+   Name = "Execute Main Script",
+   Callback = function()
+      loadstring(game:HttpGet('https://raw.githubusercontent.com/killsondcranyououtofcom/ElextraHub/main/DOJ%3ARP%20Sandy%20shores%20%7C%7C%20Elextra%20hub'))()
+   end,
+})
+
+-- Teleport Tab
+
+local TeleportTab = Window:CreateTab("Other Scripts", 4483362458) -- Title, Image
+local Section = TeleportTab:CreateSection("You can find here some other Scripts to fuck off admins.")
+
+local Button = TeleportTab:CreateButton({
+    Name = "Give All Guns & Tools",
+    Callback = function()
+        loadstring(game:HttpGet('https://pastebin.com/raw/kV6XZC8C'))()
+    end,
+ })
+
+ local Button = TeleportTab:CreateButton({
+    Name = "SPAWN CONE ON ALL [Needs to have cones held] (Spawns cones on 10 people since that's the limit)",
+    Callback = function()
+        loadstring(game:HttpGet('https://pastebin.com/raw/kV6XZC8C'))()
+    end,
+ })
+
+ local Button = TeleportTab:CreateButton({
+    Name = "Infinite Yield",
+    Callback = function()
+        loadstring(game:HttpGet('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'))()
+    end,
+ })
+
+ local Button = TeleportTab:CreateButton({
+    Name = "CMD-X Admin",
+    Callback = function()
+        loadstring(game:HttpGet('https://raw.githubusercontent.com/CMD-X/CMD-X/master/Source', true))()
+    end,
+ })
+
+ local Button = TeleportTab:CreateButton({
+    Name = "Unversal FE Script",
+    Callback = function()
+        loadstring(game:HttpGet('https://raw.githubusercontent.com/Dvrknvss/UniversalFEScriptHub/main/Script'))()
+    end,
+ })
+
+-- Misc Tab
+
+local MiscTab = Window:CreateTab("Misc", 4483362458) -- Title, Image
+local Section = MiscTab:CreateSection("Misc Scripts are available here!")
+
+local Button = MiscTab:CreateButton({
+    Name = "Fly",
+    Callback = function()
+       loadstring(game:HttpGet('https://pastebin.com/raw/W5aQUui6'))()
+    end,
+ })
+
+ local Button = MiscTab:CreateButton({
+    Name = "God",
+    Callback = function()
+        loadstring(game:HttpGet('https://pastebin.com/raw/Au6zJcYs'))()
+    end,
+ })
+
+ local Toggle = MiscTab:CreateToggle({
+    Name = "Invisible",
+    CurrentValue = false,
+    Flag = "Toggle1", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
+    Callback = function(Value)
+        loadstring(game:HttpGet('https://pastebin.com/raw/iG6rHqz9'))()
+    end,
+ })
+
+ local Slider = MiscTab:CreateSlider({
+    Name = "Edit Walkspeed",
+    Range = {16, 500},
+    Increment = 10,
+    Suffix = "Walkspeed:",
+    CurrentValue = 16,
+    Flag = "Slider1", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
+    Callback = function(Value)
+        game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = (Value)
+    end,
+ })
+ 
+ local Slider = MiscTab:CreateSlider({
+    Name = "Edit JumpPower",
+    Range = {50, 1000},
+    Increment = 10,
+    Suffix = "JumpPower:",
+    CurrentValue = 10,
+    Flag = "Slider1", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
+    Callback = function(Value)
+        game.Players.LocalPlayer.Character.Humanoid.JumpPower = (Value)
+    end,
+ })
+
+ local Button = MiscTab:CreateButton({
+    Name = "Rejoin",
+    Callback = function()
+        loadstring(game:HttpGet('https://pastebin.com/raw/yVdXMaFy'))()
+    end,
+ })
